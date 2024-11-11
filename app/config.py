@@ -6,8 +6,8 @@ load_dotenv()
 
 
 class BOT_SETTINGS(BaseSettings):
-    BOT_TOKEN: str = os.environ.get('DB_HOST')
-    CHANNEL_ID: int = os.environ.get('DB_PORT')
+    BOT_TOKEN: str = os.environ.get('TELEGRAM_BOT_KEY')
+    CHANNEL_ID: int = os.environ.get('CHANNEL_ID')
 
 
 class Settings(BaseSettings):

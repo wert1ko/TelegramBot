@@ -11,9 +11,10 @@ bot = Bot(token=settings.bot.BOT_TOKEN)
 async def send_to_channel(data: MessageData):
     try:
         message_text = (
-            f"ПІБ: {data.full_name} 😄\n"
-            f"Номер телефону: {data.phone_number} 📱\n"
-            f"Повідомлення: {data.comment} ✍️"
+            f"Ім'я та прізвище: {data.full_name}\n"
+            f"Пошта: {data.email}\n"
+            f"Номер телефону: {data.phone_number}\n"
+            f"Рід діяльності: {data.type_of_activity}"
         )
         await bot.send_message(settings.bot.CHANNEL_ID, message_text)
         return {"status": "Message sent successfully"}

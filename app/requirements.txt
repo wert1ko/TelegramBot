@@ -9,6 +9,8 @@ async-timeout==4.0.3
 attrs==24.2.0
 certifi==2024.8.30
 click==8.1.7
+dnspython==2.7.0
+email_validator==2.2.0
 exceptiongroup==1.2.2
 fastapi==0.115.4
 frozenlist==1.5.0

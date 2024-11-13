@@ -1,10 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from schemas.message_data import MessageData
 from aiogram import Bot
+from fastapi.middleware.cors import CORSMiddleware
 from config import settings
 
 app = FastAPI()
 bot = Bot(token=settings.bot.BOT_TOKEN)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.post("/bot/send_to_channel")
